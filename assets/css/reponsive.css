@@ -1,0 +1,163 @@
+/* MOBILE AND TABLE */
+@media (max-width: 1023px) {
+    .hide-on__mobile-tablet {
+        display: none;
+    }
+
+    #header {
+        height: 68px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    .header-with-search {
+        height: 68px;
+    }
+
+    .header__cart-list {
+        position: fixed;
+        top: 68px;
+        right: 0;
+        width: 100%;
+        z-index: 10;
+        padding: 0 calc((100% - 644px)/2);
+    }
+
+    .header__cart-list-item {
+        max-height: 26vh;
+    }
+
+    .header__cart-list::before {
+        display: none;
+    }
+
+    .app__container {
+        margin-top: calc(68px + 46px);
+    }
+
+    .header__sort-bar {
+        display: flex;
+    }
+}
+
+/* TABLET */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .hide-on__tablet {
+        display: none;
+    }
+
+    .header__cart {
+        text-align: right;
+        width: 80px;
+    }
+    
+    .header__cart-notice {
+        right: 0;
+    }
+
+    .header__search-options {
+        position: fixed;
+        top: 52px;
+        right: 232px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 739px) {
+    .hide-on__mobile {
+        display: none;
+    }
+
+    .header__search {
+        position: fixed;
+        top: 68px;
+        right: 0;
+        left: 0px;
+        height: 46px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0 , 0.1);
+        padding: 0 8px;
+        z-index: 1;
+        animation: headerSearchSideIn linear 0.2s;
+        display: none;
+    }
+
+    .header-mobile-search {
+        display: block;
+    }
+
+    .header__search-history {
+        position: fixed;
+        top: calc(68px + 46px);
+        right: 0;
+        width: 100%;
+    }
+
+    .header__search-input {
+        line-height: 46px;
+    }
+
+    .header-with-search {
+        justify-content: space-between;
+    }
+
+    .header-mobile-checkbox:checked  ~ .header__search{
+        display: flex;
+    }
+    
+    .header__cart,
+    .header__logo {
+        width: unset;
+    }
+
+    .header__cart-notice {
+        right: 0;
+    }
+
+    .pagination-item__link {
+        min-width: 36px;
+        height: 28px;
+        font-size: 16px;
+        line-height: 28px;
+        margin: 0;
+    }
+
+    .pagination-item__link-icon {
+        font-size: 14px;
+        line-height: 28px;
+    }
+
+    .foooter-content {
+        padding: 0 16px;
+    }
+
+    .footer-heading,
+    .footer-item {
+        text-align: center;
+    }
+
+    .footer-qr {
+        justify-content: center;
+    }
+
+    .footer-apps {
+        flex: none;
+    }
+
+    @keyframes headerSearchSideIn {
+        from {
+            opacity: 0;
+            top: calc(68px / 2);
+        }
+
+        to {
+            opacity: 1;
+            top: 68px;
+        }
+    }
+
+
+
+}
